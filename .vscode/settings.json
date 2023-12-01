@@ -1,0 +1,10 @@
+{
+    "cSpell.words": [
+        "chrono",
+        "Hasher"
+    ],
+    "rust-analyzer.linkedProjects": [
+        "./Cargo.toml",
+        "./Cargo.toml"
+    ]
+}
