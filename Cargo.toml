@@ -13,8 +13,8 @@ once_cell = "1.8.0"
 
 [[bin]]
 name = "server"
-path = "/Users/dannymurphy/coding/cs128H/CS-199-Final-Project/src/server/server.rs"
+path = "./src/server/server.rs"
 
 [[bin]]
 name = "client"
-path = "/Users/dannymurphy/coding/cs128H/CS-199-Final-Project/src/client/client.rs"
+path = "./src/client/client.rs"
