@@ -5,19 +5,19 @@ use tokio::net::TcpStream;
 
 #[tokio::main]
 async fn main() {
-    // Connect to the server
+    // connecting to the server
     let mut stream = TcpStream::connect("127.0.0.1:8080").await.unwrap();
     println!("Connected to server!");
 
-    // Read user input and send it to the server
+    // read user input and send it to the server
     loop {
-        // Prompt the user for input
+        // prompt user for input
         print!("Enter a message: ");
         let _ = std::io::stdout().flush(); // Ensure the prompt is displayed
         let mut input = String::new();
         std::io::stdin().read_line(&mut input).expect("Failed to read line");
 
-        // Send the input to the server
+        // input to server
         stream.write_all(input.as_bytes()).await.expect("Failed to write to socket");
     }
 }

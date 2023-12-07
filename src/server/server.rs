@@ -16,9 +16,9 @@ async fn handle_client(mut socket: TcpStream) {
 
     loop {
         match socket.read(&mut buf).await {
-            Ok(0) => break, // Connection closed
+            Ok(0) => break, // connection closed
             Ok(n) => {
-                // Broadcast the received message to all connected clients
+                // broadcast received message to all connected clients
                 tokio::io::stdout().write_all(&buf[..n]).await.unwrap();
             }
             Err(e) => {
